@@ -1,0 +1,1032 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aruanda Clínica Veterinária 24h · São Luís</title>
+<meta name="description" content="Clínica veterinária e hotel pet no Cohajap, em São Luís. Urgência e emergência 24 horas, internação, cirurgias, exames, pets não convencionais, banho e tosa, hotel e creche.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VeterinaryCare",
+  "name": "Aruanda Clínica Veterinária e Hotel Pet",
+  "telephone": "+55 98 98484-3232",
+  "email": "clinica@aruandavet.net",
+  "address": {"@type": "PostalAddress", "streetAddress": "R. Três, 13 - Cohajap", "addressLocality": "São Luís", "addressRegion": "MA", "postalCode": "65073-200", "addressCountry": "BR"},
+  "geo": {"@type": "GeoCoordinates", "latitude": -2.5043556, "longitude": -44.2412944},
+  "openingHours": "Mo-Su 00:00-23:59",
+  "sameAs": ["https://www.instagram.com/aruanda.vet/"]
+}
+</script>
+<style>
+  :root {
+    /* estrutura */
+    --mar: #0b3d48;          /* teal profundo: noite, plantão */
+    --mar-2: #0f5566;
+    --turquesa: #22b3c4;     /* cor da marca */
+    --turquesa-claro: #dff4f6;
+    /* destaque */
+    --mel: #f2a23a;          /* laranja da marca, aquecido para conversar com a hero */
+    --mel-claro: #fdebd2;
+    --coral-claro: #fbe3dc;
+    /* superfícies e texto */
+    --creme: #fbf5ea;
+    --papel: #fffdf8;
+    --tinta: #10262b;
+    --tinta-2: #4a5f64;
+    --linha: rgba(16, 38, 43, .12);
+    --noite: #1a120b;        /* fundo da hero */
+    --wa: #128c4a;
+    --raio: 28px;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Bricolage Grotesque', system-ui, sans-serif;
+    --ease: cubic-bezier(.2, .8, .2, 1);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--creme);
+    color: var(--tinta);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--mel); outline-offset: 3px; border-radius: 6px; box-shadow: 0 0 0 6px var(--tinta); }
+  .wrap { width: min(1180px, 100% - 40px); margin-inline: auto; }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: .6rem;
+    font-size: .76rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--mar-2);
+  }
+  .eyebrow::before { content: ""; width: 28px; height: 1px; background: currentColor; }
+  h2 {
+    font-family: var(--serif); font-weight: 400;
+    font-size: clamp(2.1rem, 4.4vw, 3.6rem);
+    line-height: 1.04; letter-spacing: -.02em;
+    margin: .9rem 0 1.1rem;
+    text-wrap: balance;
+  }
+  h2 em { font-style: italic; color: var(--mar-2); }
+  .lead { color: var(--tinta-2); max-width: 34rem; font-size: 1.06rem; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: .6rem;
+    padding: .95rem 1.45rem; border-radius: 999px;
+    font-weight: 600; font-size: .98rem; text-decoration: none;
+    transition: transform .35s var(--ease), box-shadow .35s var(--ease), background .25s;
+    min-height: 48px;
+  }
+  .btn span { transition: transform .35s var(--ease); }
+  .btn:hover { transform: translateY(-2px); }
+  .btn:hover span { transform: translateX(3px); }
+  .btn-wa { background: var(--wa); color: #fff; box-shadow: 0 10px 28px rgba(18, 140, 74, .32); }
+  .btn-mel { background: var(--mel); color: #2a1606; }
+  .btn-linha { border: 1.5px solid currentColor; }
+  .btn-claro { background: var(--papel); color: var(--tinta); box-shadow: 0 10px 30px rgba(0, 0, 0, .25); }
+
+  /* ---------- faixa do esboço ---------- */
+  .esboco {
+    position: relative; z-index: 60;
+    background: var(--mel); color: #2a1606;
+    font-size: .8rem; font-weight: 600; text-align: center; padding: 7px 16px;
+  }
+
+  /* ---------- topo ---------- */
+  .topo {
+    position: fixed; left: 0; right: 0; top: 0; z-index: 50;
+    transition: background .4s, box-shadow .4s, color .4s, top .3s;
+    color: #fff8ef;
+  }
+  .topo .wrap { display: flex; align-items: center; justify-content: space-between; height: 76px; gap: 18px; }
+  .marca { display: flex; align-items: center; gap: .7rem; text-decoration: none; }
+  .marca img { width: 42px; height: 42px; border-radius: 50%; background: #fff; }
+  .marca b { font-family: var(--serif); font-weight: 600; font-size: 1.35rem; letter-spacing: -.01em; line-height: 1; }
+  .marca small { display: block; font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; opacity: .75; margin-top: 3px; }
+  .menu { display: flex; gap: 1.6rem; }
+  .menu a { text-decoration: none; font-size: .94rem; font-weight: 500; opacity: .85; }
+  .menu a:hover { opacity: 1; }
+  .plantao-pill {
+    display: inline-flex; align-items: center; gap: .55rem;
+    padding: .55rem 1rem; border-radius: 999px; text-decoration: none;
+    background: rgba(255, 248, 239, .12); border: 1px solid rgba(255, 248, 239, .28);
+    font-weight: 600; font-size: .88rem; backdrop-filter: blur(8px);
+    min-height: 44px;
+  }
+  .vivo { width: 8px; height: 8px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 0 0 rgba(74, 222, 128, .6); animation: vivo 2s infinite; flex: none; }
+  @keyframes vivo { 70% { box-shadow: 0 0 0 9px rgba(74, 222, 128, 0); } 100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); } }
+  .topo.solido { background: rgba(251, 245, 234, .92); color: var(--tinta); box-shadow: 0 1px 0 var(--linha); backdrop-filter: blur(12px); }
+  .topo.solido .plantao-pill { background: var(--mar); color: #fff; border-color: var(--mar); }
+  @media (max-width: 900px) { .menu { display: none; } .marca small { display: none; } }
+  @media (max-width: 560px) { .plantao-pill .num { display: none; } }
+
+  /* ---------- hero (Golden interativo) ---------- */
+  .hero {
+    position: relative; height: calc(100vh - var(--faixa, 0px)); height: calc(100svh - var(--faixa, 0px)); min-height: 560px;
+    overflow: hidden; background: var(--noite); color: #fff8ef;
+    touch-action: pan-y;
+  }
+  .ambiente { position: absolute; inset: -10%; width: 120%; height: 120%; filter: blur(46px) saturate(1.25) brightness(.62); transform: translateZ(0); }
+  .midia { position: absolute; display: block; }
+  video.midia { object-fit: fill; }
+  canvas.midia { opacity: 0; pointer-events: none; }
+  canvas.midia.ativo { opacity: 1; }
+  .hero.paisagem .midia {
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 9%, #000 91%, transparent 100%);
+            mask-image: linear-gradient(90deg, transparent 0, #000 9%, #000 91%, transparent 100%);
+  }
+  .poster { position: absolute; inset: 0; background: var(--noite) center / cover no-repeat; transition: opacity .6s ease; }
+  .poster.saiu { opacity: 0; pointer-events: none; }
+  .veu {
+    position: absolute; inset: 0; pointer-events: none;
+    background:
+      radial-gradient(120% 90% at 50% 38%, transparent 55%, rgba(10, 6, 3, .55) 100%),
+      linear-gradient(90deg, rgba(14, 9, 5, .78) 0%, rgba(14, 9, 5, .3) 40%, transparent 56%),
+      linear-gradient(0deg, rgba(14, 9, 5, .5) 0%, transparent 22%);
+  }
+  .hero-texto {
+    position: absolute; left: max(20px, calc((100vw - 1180px) / 2)); top: 52%;
+    transform: translateY(-50%); max-width: min(32rem, 38vw);
+    pointer-events: none;
+  }
+  .hero-texto .eyebrow { color: var(--mel); }
+  .hero h1 {
+    font-family: var(--serif); font-weight: 400;
+    font-size: clamp(2.5rem, 5vw, 4.8rem); line-height: 1; letter-spacing: -.025em;
+    margin: 1.1rem 0 1.2rem; text-wrap: balance;
+  }
+  .hero h1 em { font-style: italic; color: var(--mel); }
+  .hero-texto p { color: rgba(255, 248, 239, .8); font-size: clamp(1rem, 1.2vw, 1.12rem); max-width: 27rem; }
+  .hero-acoes { display: flex; gap: .8rem; flex-wrap: wrap; margin-top: 2rem; pointer-events: auto; }
+  .hero-acoes .btn-linha { color: #fff8ef; border-color: rgba(255, 248, 239, .45); }
+  .hero-rodape {
+    position: absolute; left: 0; right: 0; bottom: clamp(18px, 4vh, 40px);
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    width: min(1180px, 100% - 40px); margin-inline: auto; font-size: .85rem; color: rgba(255, 248, 239, .78);
+    pointer-events: none;
+  }
+  .nota-google { display: flex; align-items: center; gap: .6rem; }
+  .nota-google strong { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; color: #fff8ef; }
+  .estrelas { color: var(--mel); letter-spacing: .1em; }
+  .dica { display: flex; align-items: center; gap: .6rem; letter-spacing: .08em; transition: opacity .8s ease; margin-left: auto; }
+  .dica i { width: 8px; height: 8px; border-radius: 50%; background: var(--mel); animation: pulso 2.2s infinite; }
+  .dica.saiu { opacity: 0; }
+  @keyframes pulso { 0% { box-shadow: 0 0 0 0 rgba(242, 162, 58, .55); } 70% { box-shadow: 0 0 0 12px rgba(242, 162, 58, 0); } 100% { box-shadow: 0 0 0 0 rgba(242, 162, 58, 0); } }
+  /* telas largas e baixas (notebook pequeno, tablet deitado): o texto não pode encostar no rodapé da hero */
+  @media (min-aspect-ratio: 4/5) and (max-width: 1100px) {
+    .hero-texto { max-width: 46vw; }
+    .hero h1 { font-size: clamp(2rem, 4.4vw, 3.2rem); }
+  }
+  @media (min-aspect-ratio: 4/5) and (max-height: 760px) {
+    .hero h1 { margin: .7rem 0 .8rem; }
+    .hero-acoes { margin-top: 1.3rem; }
+    .hero-acoes .btn-linha, .nota-google { display: none; }
+  }
+  @media (max-aspect-ratio: 4/5) {
+    .veu { background: radial-gradient(130% 80% at 50% 30%, transparent 55%, rgba(10, 6, 3, .5) 100%), linear-gradient(0deg, rgba(14, 9, 5, .94) 0%, rgba(14, 9, 5, .55) 34%, transparent 56%); }
+    .hero-texto { left: 20px; right: 20px; top: auto; bottom: max(28px, env(safe-area-inset-bottom)); transform: none; max-width: none; }
+    .hero h1 { font-size: clamp(2.2rem, 9.5vw, 3rem); margin: .7rem 0; }
+    .hero-texto p { font-size: .98rem; }
+    .hero-acoes { margin-top: 1.2rem; }
+    .hero-acoes .btn-linha, .hero-rodape { display: none; }
+  }
+
+  /* ---------- onda entre seções (assinatura) ---------- */
+  .onda { display: block; width: 100%; height: clamp(28px, 4vw, 54px); margin-top: -1px; }
+
+  /* ---------- plantão / relógio ---------- */
+  .plantao { background: var(--mar); color: #eaf7f8; padding: clamp(64px, 9vw, 120px) 0; position: relative; overflow: hidden; }
+  .plantao .wrap { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(32px, 6vw, 90px); align-items: center; }
+  .plantao .eyebrow { color: var(--mel); }
+  .plantao h2 em { color: var(--mel); }
+  .plantao .lead { color: rgba(234, 247, 248, .78); }
+  .agora { margin-top: 1.6rem; font-size: .95rem; color: rgba(234, 247, 248, .85); display: flex; align-items: center; gap: .6rem; }
+  .agora b { color: #fff; font-variant-numeric: tabular-nums; }
+  .horarios { list-style: none; margin-top: 2.2rem; border-top: 1px solid rgba(234, 247, 248, .16); }
+  .horarios li { display: grid; grid-template-columns: 1fr auto auto; gap: 14px; align-items: center; padding: 1.05rem 0; border-bottom: 1px solid rgba(234, 247, 248, .16); }
+  .horarios .h { font-family: var(--serif); font-size: 1.15rem; }
+  .horarios .q { color: rgba(234, 247, 248, .7); font-size: .9rem; }
+  .estado { font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: .3rem .65rem; border-radius: 999px; background: rgba(74, 222, 128, .16); color: #86efac; white-space: nowrap; }
+  .estado.fechado { background: rgba(234, 247, 248, .1); color: rgba(234, 247, 248, .6); }
+  .relogio { position: relative; aspect-ratio: 1; width: min(100%, 470px); justify-self: center; }
+  .relogio svg { width: 100%; height: 100%; overflow: visible; }
+  .relogio .num { font-family: var(--serif); font-size: clamp(5rem, 13vw, 9.5rem); font-weight: 400; letter-spacing: -.05em; line-height: 1; }
+  .relogio .centro { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; }
+  .relogio .centro span { font-size: .8rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(234, 247, 248, .7); margin-top: .4rem; }
+  .ponteiro { transform-origin: 250px 250px; transition: transform 1.2s var(--ease); }
+  @media (max-width: 860px) {
+    .plantao .wrap { grid-template-columns: 1fr; }
+    .relogio { width: min(100%, 340px); order: -1; }
+  }
+  @media (max-width: 480px) {
+    .horarios li { grid-template-columns: 1fr auto; }
+    .horarios .q { grid-column: 1; grid-row: 2; margin-top: -10px; }
+    .horarios .estado { grid-row: 1 / span 2; }
+  }
+
+  /* ---------- serviços (mosaico) ---------- */
+  .servicos { position: relative; padding: clamp(72px, 9vw, 130px) 0 clamp(60px, 7vw, 100px); }
+  .servicos-topo { display: flex; justify-content: space-between; align-items: end; gap: 30px; flex-wrap: wrap; }
+  .mosaico {
+    margin-top: 3rem; display: grid; gap: 14px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(220px, auto);
+    grid-template-areas:
+      "emg emg int con"
+      "emg emg cir con"
+      "exa exo exo est"
+      "hot dom dom est";
+  }
+  .cel {
+    position: relative; overflow: hidden; border-radius: 22px;
+    padding: 24px 24px 22px; display: flex; flex-direction: column; justify-content: space-between;
+    background: var(--papel); isolation: isolate;
+    transition: transform .5s var(--ease);
+  }
+  .cel:hover { transform: translateY(-4px); }
+  .cel h3 { font-family: var(--serif); font-weight: 600; font-size: 1.3rem; line-height: 1.12; letter-spacing: -.01em; }
+  .cel p { font-size: .93rem; color: var(--tinta-2); margin-top: .45rem; max-width: 22rem; }
+  .cel .hora { font-size: .74rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--mar-2); }
+  .cel .bolha { position: absolute; z-index: -1; width: 70%; right: -14%; bottom: -26%; opacity: .9; transition: transform .8s var(--ease); }
+  .cel:hover .bolha { transform: rotate(-8deg) scale(1.06); }
+  .cel.foto { padding: 0; color: #fff; }
+  .cel.foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; transition: transform 1s var(--ease); }
+  .cel.foto:hover img { transform: scale(1.04); }
+  .cel.foto::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(0deg, rgba(8, 30, 36, .82) 0%, rgba(8, 30, 36, .1) 55%, transparent 75%); }
+  .cel.foto .txt { margin-top: auto; padding: 22px 24px; }
+  .cel.foto p { color: rgba(255, 255, 255, .85); }
+  .cel.foto .hora { color: var(--mel); }
+  .c-emg { grid-area: emg; background: var(--mar); color: #eaf7f8; padding: 34px; }
+  .c-emg h3 { font-size: clamp(1.9rem, 3vw, 2.6rem); font-weight: 400; }
+  .c-emg h3 em, .c-emg .hora { color: var(--mel); }
+  .c-emg p { color: rgba(234, 247, 248, .78); font-size: 1rem; }
+  .c-emg .big { font-family: var(--serif); font-size: clamp(5rem, 9vw, 8rem); line-height: .85; letter-spacing: -.05em; color: transparent; -webkit-text-stroke: 1.5px rgba(242, 162, 58, .9); }
+  /* fotos recortadas da clínica sobre o turquesa da marca: o degradê fica mais curto para não apagar o fundo */
+  .cel.foto.recorte { background: #2fb7cc; }
+  .cel.foto.recorte::after { background: linear-gradient(0deg, rgba(8, 40, 48, .86) 0%, rgba(8, 40, 48, .35) 32%, transparent 52%); }
+  .c-int { grid-area: int; }
+  .c-cir { grid-area: cir; }
+  .c-con { grid-area: con; }
+  .c-exa { grid-area: exa; background: var(--papel); }
+  .c-exo { grid-area: exo; }
+  .c-est { grid-area: est; }
+  .c-hot { grid-area: hot; text-decoration: none; }
+  .c-dom { grid-area: dom; background: var(--turquesa-claro); }
+  @media (max-width: 980px) {
+    .mosaico { grid-template-columns: 1fr 1fr; grid-template-areas: "emg emg" "int cir" "con con" "exa hot" "exo exo" "est dom"; }
+    .c-con, .c-exo { min-height: 320px; }
+    .c-est { min-height: 340px; }
+  }
+  @media (max-width: 560px) {
+    .mosaico { grid-template-columns: 1fr; grid-template-areas: "emg" "int" "cir" "con" "exa" "exo" "est" "hot" "dom"; grid-auto-rows: minmax(150px, auto); gap: 10px; }
+    .c-con, .c-exo, .c-est { min-height: 330px; }
+    .c-int, .c-cir, .c-hot { min-height: 260px; }
+    .cel { padding: 18px 16px; border-radius: 18px; }
+    .cel.foto .txt { padding: 16px; }
+    .cel h3 { font-size: 1.12rem; }
+    .cel p { font-size: .86rem; }
+  }
+
+  /* ---------- hotel e creche (polaroids) ---------- */
+  .hotel { position: relative; background: var(--mel-claro); padding: clamp(80px, 10vw, 140px) 0; overflow: hidden; }
+  .hotel .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(30px, 6vw, 90px); align-items: center; }
+  .hotel h2 em { color: #c46f12; }
+  .hotel .eyebrow { color: #a65a0a; }
+  .album { position: relative; aspect-ratio: 1 / 1.06; }
+  .polaroid {
+    position: absolute; margin: 0; background: var(--papel); padding: 10px 10px 0; border-radius: 16px;
+    box-shadow: 0 22px 44px rgba(90, 50, 10, .18), 0 2px 0 rgba(90, 50, 10, .05);
+    transition: transform .7s var(--ease), box-shadow .7s var(--ease);
+  }
+  .polaroid img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 10px; }
+  .polaroid figcaption { font-family: var(--serif); font-style: italic; font-size: .98rem; padding: 10px 6px 12px; color: var(--tinta); }
+  .polaroid:hover { transform: rotate(0) scale(1.04) !important; z-index: 5; box-shadow: 0 30px 60px rgba(90, 50, 10, .26); }
+  .p1 { width: 42%; left: 0; top: 0; transform: rotate(-6deg); }
+  .p2 { width: 40%; left: 46%; top: 5%; transform: rotate(4deg); z-index: 2; }
+  .p3 { width: 38%; left: 6%; bottom: 0; transform: rotate(3deg); z-index: 3; }
+  .p4 { width: 38%; right: 2%; bottom: 5%; transform: rotate(-4deg); z-index: 1; }
+  .selo-hotel {
+    position: absolute; z-index: 6; left: 42%; top: 47%; width: 112px; height: 112px; border-radius: 50%;
+    background: var(--mar); color: #fff; display: grid; place-content: center; text-align: center;
+    font-family: var(--serif); line-height: 1; box-shadow: 0 14px 30px rgba(11, 61, 72, .35);
+  }
+  .selo-hotel b { font-size: 2.1rem; font-weight: 400; color: var(--mel); }
+  .selo-hotel span { font-family: var(--sans); font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; margin-top: 4px; }
+  .beneficios { list-style: none; margin-top: 1.8rem; border-top: 1px solid rgba(166, 90, 10, .2); }
+  .beneficios li { display: grid; grid-template-columns: 34px 1fr; gap: 12px; padding: 1rem 0; border-bottom: 1px solid rgba(166, 90, 10, .2); }
+  .beneficios i { font-style: normal; font-family: var(--serif); font-size: 1.1rem; color: #c46f12; }
+  .beneficios b { font-weight: 600; display: block; }
+  .beneficios span { color: var(--tinta-2); font-size: .94rem; }
+  .hotel .acoes { display: flex; gap: .8rem; flex-wrap: wrap; margin-top: 2rem; }
+  .hotel .btn-linha { color: var(--tinta); }
+  @media (max-width: 900px) {
+    .hotel .wrap { grid-template-columns: 1fr; }
+    .album { max-width: 520px; width: 100%; margin: 0 auto 10px; }
+    .selo-hotel { width: 88px; height: 88px; } .selo-hotel b { font-size: 1.6rem; }
+    .polaroid figcaption { font-size: .82rem; padding: 7px 4px 9px; }
+  }
+
+  /* ---------- espaço (split) ---------- */
+  .espaco { padding: clamp(60px, 8vw, 110px) 0 clamp(70px, 9vw, 130px); }
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .split .ft { border-radius: var(--raio); overflow: hidden; min-height: 520px; position: relative; }
+  .split .ft img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+  .split .card { border-radius: var(--raio); background: var(--mel-claro); padding: clamp(32px, 5vw, 70px); display: flex; flex-direction: column; justify-content: center; }
+  .ambientes { list-style: none; margin-top: 1.6rem; display: flex; flex-wrap: wrap; gap: .5rem; }
+  .ambientes li { padding: .45rem .9rem; border-radius: 999px; background: var(--papel); font-size: .9rem; font-weight: 500; }
+  @media (max-width: 860px) { .split { grid-template-columns: 1fr; } .split .ft { min-height: 380px; } }
+
+  /* ---------- equipe (carrossel) ---------- */
+  .equipe { background: var(--papel); padding: clamp(70px, 9vw, 130px) 0; }
+  .equipe-topo { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; }
+  .setas { display: flex; gap: .5rem; }
+  .setas button { width: 52px; height: 52px; border-radius: 50%; border: 1.5px solid var(--linha); background: transparent; font-size: 1.2rem; cursor: pointer; color: var(--tinta); transition: background .25s, color .25s; }
+  .setas button:hover { background: var(--tinta); color: var(--papel); }
+  .trilho {
+    margin-top: 2.6rem; display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory;
+    padding: 4px max(20px, calc((100vw - 1180px) / 2)) 24px; scrollbar-width: none;
+  }
+  .trilho::-webkit-scrollbar { display: none; }
+  .vet { flex: 0 0 clamp(270px, 30vw, 360px); scroll-snap-align: start; border-radius: 24px; overflow: hidden; position: relative; aspect-ratio: 4 / 5.2; background: var(--turquesa-claro); }
+  .vet img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; transition: transform 1s var(--ease); }
+  .vet:hover img { transform: scale(1.04); }
+  .vet .ficha {
+    position: absolute; left: 12px; right: 12px; bottom: 12px;
+    background: var(--papel); border-radius: 16px; padding: 14px 16px;
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  }
+  .vet h3 { font-family: var(--serif); font-weight: 600; font-size: 1.08rem; line-height: 1.2; }
+  .vet .esp { font-size: .82rem; color: var(--tinta-2); }
+  .vet .sinal { flex: none; width: 38px; height: 38px; border-radius: 50%; background: var(--mar); color: #fff; display: grid; place-items: center; font-size: .9rem; }
+  .vet.time { flex-basis: clamp(300px, 46vw, 600px); }
+  .vet.time img { object-position: 50% 30%; }
+
+  /* ---------- avaliações (polaroids) ---------- */
+  .avaliacoes { padding: clamp(80px, 10vw, 140px) 0; }
+  .avaliacoes .wrap { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(30px, 6vw, 90px); align-items: center; }
+  .nota { display: flex; align-items: baseline; gap: .8rem; margin-top: 1rem; }
+  .nota strong { font-family: var(--serif); font-size: clamp(5rem, 10vw, 8rem); font-weight: 400; line-height: .9; letter-spacing: -.04em; color: var(--mar-2); }
+  .nota span { color: var(--tinta-2); }
+  .mural { position: relative; min-height: 470px; }
+  .postit {
+    position: absolute; width: min(330px, 78%); background: var(--papel); padding: 26px 26px 22px; border-radius: 18px;
+    box-shadow: 0 18px 40px rgba(16, 38, 43, .12), 0 2px 0 rgba(16, 38, 43, .04);
+    transition: transform .6s var(--ease);
+  }
+  .postit:hover { transform: rotate(0deg) translateY(-6px) !important; z-index: 3; }
+  .postit p { font-family: var(--serif); font-size: 1.18rem; line-height: 1.35; font-style: italic; }
+  .postit small { display: block; margin-top: 14px; font-size: .8rem; color: var(--tinta-2); }
+  .postit .estrelas { font-size: .9rem; display: block; margin-bottom: 10px; }
+  .postit:nth-child(1) { left: 0; top: 10px; transform: rotate(-4deg); }
+  .postit:nth-child(2) { right: 0; top: 120px; transform: rotate(3deg); background: var(--turquesa-claro); }
+  .postit:nth-child(3) { left: 14%; bottom: 0; transform: rotate(-1.5deg); background: var(--mel-claro); }
+  @media (max-width: 860px) {
+    .avaliacoes .wrap { grid-template-columns: 1fr; }
+    .mural { min-height: 0; display: grid; gap: 16px; }
+    .postit { position: static; width: auto; }
+  }
+
+  /* ---------- chamada final (foto cheia) ---------- */
+  .chamada { position: relative; min-height: 88vh; display: grid; place-items: center; text-align: center; color: #fff; overflow: hidden; }
+  .chamada img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; z-index: -2; }
+  .chamada::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(0deg, rgba(8, 30, 36, .88) 0%, rgba(8, 30, 36, .45) 50%, rgba(8, 30, 36, .25) 100%); }
+  .chamada .wrap { padding: 120px 0 80px; align-self: end; }
+  .chamada h2 { font-size: clamp(2.4rem, 6vw, 5rem); color: #fff; }
+  .chamada h2 em { color: var(--mel); }
+  .chamada p { color: rgba(255, 255, 255, .86); max-width: 36rem; margin: 0 auto; }
+  .chamada .acoes { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+  .chamada .btn-linha { color: #fff; border-color: rgba(255, 255, 255, .55); }
+
+  /* ---------- vantagens + contato ---------- */
+  .contato { background: var(--mar); color: #eaf7f8; padding: clamp(70px, 9vw, 120px) 0 40px; }
+  .contato .eyebrow { color: var(--mel); }
+  .contato h2 em { color: var(--mel); }
+  .grade-contato { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(30px, 5vw, 70px); }
+  .vantagens { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 2rem; }
+  .vant { border: 1px solid rgba(234, 247, 248, .18); border-radius: 18px; padding: 20px; text-decoration: none; transition: background .3s; }
+  .vant:hover { background: rgba(234, 247, 248, .06); }
+  .vant b { font-family: var(--serif); font-weight: 600; font-size: 1.15rem; display: block; }
+  .vant span { font-size: .88rem; color: rgba(234, 247, 248, .7); }
+  .dados { list-style: none; margin-top: 2rem; }
+  .dados li { padding: .9rem 0; border-bottom: 1px solid rgba(234, 247, 248, .16); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .dados a { text-decoration: none; }
+  .dados a:hover { color: var(--mel); }
+  .mapa { border-radius: var(--raio); overflow: hidden; min-height: 420px; background: var(--mar-2); position: relative; }
+  .mapa iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; filter: grayscale(.25) contrast(1.05); }
+  .rodape { margin-top: clamp(60px, 8vw, 100px); padding-top: 26px; border-top: 1px solid rgba(234, 247, 248, .16); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: .85rem; color: rgba(234, 247, 248, .65); }
+  .rodape .gigante { width: 100%; font-family: var(--serif); font-size: clamp(4rem, 17vw, 15rem); line-height: .8; letter-spacing: -.05em; color: rgba(234, 247, 248, .07); text-align: center; margin-bottom: 20px; user-select: none; }
+  @media (max-width: 860px) { .grade-contato { grid-template-columns: 1fr; } .vantagens { grid-template-columns: 1fr; } .mapa { min-height: 320px; } }
+
+  /* ---------- WhatsApp flutuante ---------- */
+  .fab {
+    position: fixed; right: 18px; bottom: max(18px, env(safe-area-inset-bottom)); z-index: 40;
+    display: inline-flex; align-items: center; gap: .55rem;
+    background: var(--wa); color: #fff; text-decoration: none; font-weight: 600; font-size: .92rem;
+    padding: .85rem 1.15rem; border-radius: 999px; box-shadow: 0 12px 30px rgba(0, 0, 0, .25);
+    transform: translateY(140%); transition: transform .5s var(--ease);
+  }
+  .fab:not(.on) { visibility: hidden; transition: transform .5s var(--ease), visibility 0s .5s; }
+  .fab.on { transform: none; }
+  .fab svg { width: 20px; height: 20px; }
+
+  /* ---------- modo apresentação (antes × depois) ---------- */
+  .apresentar {
+    position: fixed; right: 18px; bottom: calc(max(18px, env(safe-area-inset-bottom)) + 64px); z-index: 40;
+    border: 0; cursor: pointer; font: 600 .82rem var(--sans);
+    padding: .75rem 1rem; border-radius: 999px; background: var(--tinta); color: var(--creme);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, .25); display: inline-flex; align-items: center; gap: .5rem;
+  }
+  .apresentar[aria-pressed="true"] { background: var(--mel); color: #2a1606; }
+  @media (max-width: 700px) { .apresentar, body.notas .pino { display: none; } }
+  .pino { display: none; position: absolute; z-index: 30; max-width: 280px; }
+  body.notas .pino { display: block; }
+  .pino button { width: 34px; height: 34px; border-radius: 50%; border: 0; background: var(--mel); color: #2a1606; font: 700 .9rem var(--sans); cursor: pointer; box-shadow: 0 0 0 6px rgba(242, 162, 58, .3); }
+  .pino .bal {
+    margin-top: 8px; background: var(--tinta); color: var(--creme); border-radius: 14px; padding: 12px 14px; font-size: .84rem; line-height: 1.45;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, .25);
+  }
+  .pino .bal b { color: var(--mel); display: block; font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 4px; }
+  .pino.fechado .bal { display: none; }
+
+  /* ---------- revelação na rolagem ---------- */
+  .rv { opacity: 0; transform: translateY(26px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
+  .rv.in { opacity: 1; transform: none; }
+  .rv-d1 { transition-delay: .08s; } .rv-d2 { transition-delay: .16s; } .rv-d3 { transition-delay: .24s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .rv { opacity: 1; transform: none; transition: none; }
+    .vivo, .dica i { animation: none; }
+    .cel, .cel img, .vet img, .postit, .ponteiro { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="esboco">Pré-projeto Lumina · Opção 2 · fotos do Instagram @aruanda.vet usadas só nesta demonstração</div>
+
+<!-- ============ TOPO ============ -->
+<header class="topo" id="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Aruanda, início">
+      <img src="img/logo.jpg" alt="" width="42" height="42">
+      <span><b>Aruanda</b><small>Clínica veterinária e hotel pet</small></span>
+    </a>
+    <nav class="menu" aria-label="Seções">
+      <a href="#plantao">Plantão 24h</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#hotel">Hotel e creche</a>
+      <a href="#equipe">Equipe</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="plantao-pill" href="tel:+5598984843232"><i class="vivo" aria-hidden="true"></i>Plantão 24h<span class="num"> · (98) 98484-3232</span></a>
+  </div>
+</header>
+
+<main>
+<!-- ============ HERO (Golden interativo) ============ -->
+<section class="hero" id="inicio" aria-label="Abertura: um filhote de golden que acompanha o cursor com o olhar">
+  <canvas class="ambiente" id="ambiente" width="54" height="96" aria-hidden="true"></canvas>
+  <video class="midia" id="video" muted playsinline loop preload="auto" aria-hidden="true"></video>
+  <canvas class="midia" id="sprite" aria-hidden="true"></canvas>
+  <div class="poster" id="poster" style="background-image:url(assets/poster.jpg)"></div>
+  <div class="veu"></div>
+
+  <div class="hero-texto">
+    <span class="eyebrow">Clínica veterinária 24h · Cohajap, São Luís</span>
+    <h1>Ele confia em você. <em>Você pode confiar na gente.</em></h1>
+    <p>Urgência e emergência 24 horas, internação, cirurgias, exames, pets não convencionais, banho e tosa, hotel e creche, num só lugar.</p>
+    <div class="hero-acoes">
+      <a class="btn btn-wa" href="https://wa.me/5598984843232?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Aruanda." target="_blank" rel="noopener">Chamar no WhatsApp <span>→</span></a>
+      <a class="btn btn-linha" href="#servicos">Ver serviços</a>
+    </div>
+  </div>
+
+  <div class="hero-rodape">
+    <div class="nota-google"><strong>4,9</strong><span><span class="estrelas" aria-hidden="true">★★★★★</span><br>133 avaliações no Google</span></div>
+    <div class="dica" id="dica"><i></i>mova o cursor</div>
+  </div>
+
+  <div class="pino" style="left:58%;top:22%"><button aria-label="Nota 1">1</button><div class="bal"><b>Hoje</b>A capa do site é uma foto borrada com “Seu Pet em Boas Mãos”. Aqui, o filhote olha para quem chega e o WhatsApp está a um toque.</div></div>
+</section>
+
+<!-- ============ PLANTÃO ============ -->
+<section class="plantao" id="plantao" aria-labelledby="t-plantao">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow rv">De dia e de madrugada</span>
+      <h2 id="t-plantao" class="rv rv-d1">A luz da Aruanda <em>não apaga.</em></h2>
+      <p class="lead rv rv-d2">Emergência não marca hora. Por isso a equipe fica de plantão o dia inteiro, todos os dias, com internação e hotel funcionando junto.</p>
+      <p class="agora rv rv-d2"><i class="vivo" aria-hidden="true"></i><span>Agora são <b id="hora-agora">--:--</b> em São Luís, e estamos atendendo.</span></p>
+      <ul class="horarios rv rv-d3">
+        <li><span class="h">Urgência e emergência</span><span class="q">24 horas</span><span class="estado">Aberto</span></li>
+        <li><span class="h">Internação e hotel</span><span class="q">24 horas</span><span class="estado">Aberto</span></li>
+        <li><span class="h">Banho e tosa</span><span class="q">seg a sáb, 8h às 17h</span><span class="estado" id="estado-banho">Aberto</span></li>
+      </ul>
+    </div>
+    <div class="relogio rv" aria-hidden="true">
+      <svg viewBox="0 0 500 500">
+        <circle cx="250" cy="250" r="236" fill="none" stroke="rgba(234,247,248,.14)" stroke-width="1"/>
+        <g id="marcas"></g>
+        <circle cx="250" cy="250" r="200" fill="none" stroke="#f2a23a" stroke-width="2" stroke-dasharray="1256.6" stroke-dashoffset="1256.6" id="arco" transform="rotate(-90 250 250)" stroke-linecap="round"/>
+        <g class="ponteiro" id="ponteiro"><circle cx="250" cy="50" r="9" fill="#f2a23a"/><circle cx="250" cy="50" r="18" fill="none" stroke="rgba(242,162,58,.4)"/></g>
+      </svg>
+      <div class="centro"><div class="num">24h</div><span>todos os dias</span></div>
+    </div>
+  </div>
+  <div class="pino" style="right:6%;top:10%"><button aria-label="Nota 2">2</button><div class="bal"><b>Hoje</b>O site atual não dá destaque à emergência 24h e não tem botão de WhatsApp na capa, só um link de telefone.</div></div>
+</section>
+<svg class="onda" viewBox="0 0 1440 54" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h1440v18c-120 22-240 30-360 18S840 4 720 16 480 46 360 40 120 14 0 22z" fill="#0b3d48"/></svg>
+
+<!-- ============ SERVIÇOS ============ -->
+<section class="servicos" id="servicos" aria-labelledby="t-servicos">
+  <div class="wrap">
+    <div class="servicos-topo">
+      <div>
+        <span class="eyebrow rv">Serviços</span>
+        <h2 id="t-servicos" class="rv rv-d1">Tudo que seu pet precisa, <em>num lugar só.</em></h2>
+      </div>
+      <p class="lead rv rv-d2">Da consulta de rotina ao centro cirúrgico, do banho ao hotel. Cães, gatos e também coelhos, hamsters, porquinhos-da-índia, silvestres e exóticos.</p>
+    </div>
+
+    <div class="mosaico">
+      <article class="cel c-emg rv">
+        <div><span class="hora">Plantão 24 horas</span><h3 style="margin-top:.6rem">Urgência e <em>emergência</em></h3><p>Atendimento 24 horas, dia e noite, com equipe de plantão e internação no mesmo lugar.</p></div>
+        <div style="display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-top:24px">
+          <span class="big" aria-hidden="true">24h</span>
+          <span style="display:flex;gap:.6rem;flex-wrap:wrap">
+            <a class="btn btn-mel" href="https://wa.me/5598984843232?text=Ol%C3%A1!%20%C3%89%20uma%20emerg%C3%AAncia." target="_blank" rel="noopener">É uma emergência <span>→</span></a>
+            <a class="btn btn-linha" style="color:#eaf7f8" href="tel:+5598984843232">Ligar agora</a>
+          </span>
+        </div>
+      </article>
+      <article class="cel c-int foto rv rv-d1">
+        <img src="img/internacao.jpg" alt="Fachada da Aruanda Clínica Veterinária, onde fica a internação" loading="lazy" style="object-position:30% 50%">
+        <div class="txt"><span class="hora">24 horas</span><h3>Internação</h3><p>Acompanhamento 24 horas durante a internação.</p></div>
+      </article>
+      <article class="cel c-con foto recorte rv rv-d2">
+        <img src="img/vacina.jpg" alt="Profissional da Aruanda com um lulu-da-pomerânia no colo" loading="lazy" style="object-position:50% 20%">
+        <div class="txt"><span class="hora">Clínico geral</span><h3>Consultas e vacinas</h3><p>Rotina, prevenção e acompanhamento de perto, do filhote ao idoso.</p></div>
+      </article>
+      <article class="cel c-cir foto recorte rv rv-d1">
+        <img src="img/cirurgia.jpg" alt="Cirurgiã da Aruanda no centro cirúrgico" loading="lazy" style="object-position:65% 40%">
+        <div class="txt"><span class="hora">Centro cirúrgico</span><h3>Cirurgias</h3><p>Com anestesiologista veterinário na equipe.</p></div>
+      </article>
+      <article class="cel c-exa foto recorte rv">
+        <img src="img/felino.jpg" alt="Gato tigrado olhando para cima" loading="lazy" style="object-position:50% 22%">
+        <div class="txt"><span class="hora">Diagnóstico</span><h3>Exames</h3><p>Exames para apoiar o diagnóstico e o tratamento.</p></div>
+      </article>
+      <article class="cel c-exo foto rv rv-d1">
+        <img src="img/exoticos.jpg" alt="Porquinho-da-índia, hamster e coelho lado a lado" loading="lazy" style="object-position:50% 40%">
+        <div class="txt"><span class="hora">Pets não convencionais</span><h3>Coelhos, roedores, silvestres e exóticos</h3><p>Inclusive a odontologia dos pequenos, que tanto pede atenção.</p></div>
+      </article>
+      <article class="cel c-est foto rv rv-d2">
+        <img src="img/estetica.jpg" alt="Produtos da linha Lama Negra, da Hydra Vegan, usados no Centro de Estética" loading="lazy" style="object-position:40% 30%">
+        <div class="txt"><span class="hora">Seg a sáb, 8h às 17h</span><h3>Centro de Estética</h3><p>Banho e tosa, agora com a linha Lama Negra da Hydra Vegan.</p></div>
+      </article>
+      <a class="cel c-hot foto rv" href="#hotel">
+        <img src="img/hotel-creche.jpg" alt="Husky e shih-tzu juntos" loading="lazy" style="object-position:50% 40%">
+        <div class="txt"><span class="hora">24 horas</span><h3>Hotel e creche →</h3><p>Hospedagem e daycare com cuidado de clínica.</p></div>
+      </a>
+      <article class="cel c-dom foto rv rv-d1">
+        <img src="img/bulldog.jpg" alt="Buldogue inglês deitado no chão, tranquilo" loading="lazy" style="object-position:50% 45%">
+        <div class="txt"><span class="hora">Domicílio</span><h3>A equipe vai até você</h3><p>Para quando o pet não pode sair de casa, ou não gosta.</p></div>
+      </article>
+    </div>
+  </div>
+  <div class="pino" style="right:3%;top:30px"><button aria-label="Nota 3">3</button><div class="bal"><b>Hoje</b>O site lista só 3 serviços. Faltam emergência, internação, cirurgia, exames, creche, domicílio e exóticos.</div></div>
+</section>
+
+<!-- ============ HOTEL E CRECHE ============ -->
+<svg class="onda" viewBox="0 0 1440 54" preserveAspectRatio="none" aria-hidden="true" style="transform:scaleY(-1);margin-bottom:-1px"><path d="M0 0h1440v18c-120 22-240 30-360 18S840 4 720 16 480 46 360 40 120 14 0 22z" fill="#fdebd2"/></svg>
+<section class="hotel" id="hotel" aria-labelledby="t-hotel">
+  <div class="wrap">
+    <div class="album rv" role="group" aria-label="Fotos do hotel e da creche da Aruanda">
+      <figure class="polaroid p1"><img src="img/hotel-creche.jpg" alt="Husky e shih-tzu juntos" loading="lazy"><figcaption>Amigos de hospedagem</figcaption></figure>
+      <figure class="polaroid p2"><img src="img/parquinho.jpg" alt="Dois cães brincando na grama sintética" loading="lazy" style="object-position:50% 35%"><figcaption>Hora de brincar</figcaption></figure>
+      <figure class="polaroid p3"><img src="img/mascote.jpg" alt="Cão de pelo preto com bandana laranja na grama sintética" loading="lazy" style="object-position:50% 40%"><figcaption>Companhia o dia todo</figcaption></figure>
+      <figure class="polaroid p4"><img src="img/banho.jpg" alt="Cão de pelo longo na mesa de tosa" loading="lazy" style="object-position:35% 50%"><figcaption>Pronto pra voltar pra casa</figcaption></figure>
+      <div class="selo-hotel" aria-hidden="true"><b>24h</b><span>hotel pet</span></div>
+    </div>
+    <div>
+      <span class="eyebrow rv">Hotel e creche Aruanda</span>
+      <h2 id="t-hotel" class="rv rv-d1">Férias pra você. <em>Colo pra ele.</em></h2>
+      <p class="lead rv rv-d2">Vai viajar ou passar o dia fora? Na Aruanda, o seu pet fica hospedado ou passa o dia na creche dentro de uma clínica 24 horas, com veterinário por perto o tempo todo.</p>
+      <ul class="beneficios rv rv-d2">
+        <li><i>01</i><div><b>Hospedagem 24 horas</b><span>Para o fim de semana, o feriado ou as férias inteiras.</span></div></li>
+        <li><i>02</i><div><b>Creche durante o dia</b><span>Brincadeira e companhia enquanto você trabalha.</span></div></li>
+        <li><i>03</i><div><b>Cuidado de clínica</b><span>Se ele precisar de atenção, a equipe de plantão está no mesmo lugar.</span></div></li>
+      </ul>
+      <div class="acoes rv rv-d3">
+        <a class="btn btn-wa" href="https://wa.me/5598984843232?text=Ol%C3%A1!%20Quero%20reservar%20uma%20hospedagem%20no%20hotel%20da%20Aruanda." target="_blank" rel="noopener">Reservar hospedagem <span>→</span></a>
+        <a class="btn btn-linha" href="https://wa.me/5598984843232?text=Ol%C3%A1!%20Quero%20saber%20sobre%20a%20creche%20da%20Aruanda." target="_blank" rel="noopener">Saber da creche</a>
+      </div>
+    </div>
+  </div>
+  <div class="pino" style="right:4%;top:40px"><button aria-label="Nota 4">4</button><div class="bal"><b>Hoje</b>O hotel aparece só como “hospedagem” numa lista, sem foto e sem a creche. Aqui ele vira um motivo para escolher a Aruanda.</div></div>
+</section>
+<svg class="onda" viewBox="0 0 1440 54" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h1440v18c-120 22-240 30-360 18S840 4 720 16 480 46 360 40 120 14 0 22z" fill="#fdebd2"/></svg>
+
+<!-- ============ ESPAÇO ============ -->
+<section class="espaco" aria-labelledby="t-espaco">
+  <div class="wrap split">
+    <div class="ft rv"><img src="img/consultorio.jpg" alt="Veterinário da Aruanda no consultório de parede ilustrada" loading="lazy"></div>
+    <div class="card rv rv-d1">
+      <span class="eyebrow">Feito com carinho, pensado em cada detalhe</span>
+      <h2 id="t-espaco">Um espaço que <em>acolhe</em> antes de tratar.</h2>
+      <p class="lead">Quem passa pela Aruanda fala do ambiente: aconchegante, espaçoso, com charme em cada canto. É ali que o pet espera, é atendido e descansa.</p>
+      <ul class="ambientes">
+        <li>Recepção</li><li>Farmácia</li><li>Consultórios</li><li>Centro cirúrgico</li><li>Internação</li><li>Espaço de descanso</li><li>Centro de Estética</li><li>Hotel</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EQUIPE ============ -->
+<section class="equipe" id="equipe" aria-labelledby="t-equipe" style="position:relative">
+  <div class="wrap equipe-topo">
+    <div>
+      <span class="eyebrow rv">Equipe</span>
+      <h2 id="t-equipe" class="rv rv-d1">Quem cuida do <em>seu pet.</em></h2>
+      <p class="lead rv rv-d2">Veterinários com áreas de interesse diferentes, para olhar cada paciente do jeito que ele precisa.</p>
+    </div>
+    <div class="setas"><button type="button" id="ant" aria-label="Anterior">←</button><button type="button" id="prox" aria-label="Próximo">→</button></div>
+  </div>
+  <div class="trilho" id="trilho" tabindex="0" role="region" aria-label="Veterinários da Aruanda">
+    <article class="vet"><img src="img/natannael.jpg" alt="Dr. Natannael Fernandes" loading="lazy"><div class="ficha"><div><h3>Dr. Natannael Fernandes</h3><span class="esp">Silvestres e exóticos · UEMA</span></div><span class="sinal" aria-hidden="true">✦</span></div></article>
+    <article class="vet"><img src="img/carolina.jpg" alt="Dra. Carolina Gonçalves" loading="lazy"><div class="ficha"><div><h3>Dra. Carolina Gonçalves</h3><span class="esp">Comportamento animal · Anhembi Morumbi</span></div><span class="sinal" aria-hidden="true">✦</span></div></article>
+    <article class="vet"><img src="img/thais.jpg" alt="Dra. Thais Ramos" loading="lazy"><div class="ficha"><div><h3>Dra. Thais Ramos</h3><span class="esp">Pós-graduanda em Endocrinologia · Qualittas</span></div><span class="sinal" aria-hidden="true">✦</span></div></article>
+    <article class="vet time"><img src="img/equipe.jpg" alt="Equipe da Aruanda reunida" loading="lazy"><div class="ficha"><div><h3>E toda a equipe Aruanda</h3><span class="esp">Plantonistas, cirurgia, estética e hotel</span></div><span class="sinal" aria-hidden="true">✦</span></div></article>
+  </div>
+  <div class="pino" style="right:6%;top:60px"><button aria-label="Nota 5">5</button><div class="bal"><b>Hoje</b>O texto da equipe é genérico, tem uma frase com palavra faltando e não apresenta nenhum veterinário.</div></div>
+</section>
+<svg class="onda" viewBox="0 0 1440 54" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h1440v22c-140 18-260 26-380 14S820 6 700 18 470 48 340 40 110 12 0 24z" fill="#fffdf8"/></svg>
+
+<!-- ============ AVALIAÇÕES ============ -->
+<section class="avaliacoes" id="avaliacoes" aria-labelledby="t-aval" style="position:relative">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow rv">Avaliações no Google</span>
+      <h2 id="t-aval" class="rv rv-d1">Quem conhece, <em>recomenda.</em></h2>
+      <div class="nota rv rv-d2"><strong>4,9</strong><span><span class="estrelas" aria-hidden="true">★★★★★</span><br>133 avaliações</span></div>
+      <a class="btn btn-linha rv rv-d3" style="margin-top:1.8rem" href="https://www.google.com/maps/place/Aruanda+Cl%C3%ADnica+Veterin%C3%A1ria/@-2.5043556,-44.2412944,17z/data=!3m1!4b1!4m6!3m5!1s0x7f6936bccc52951:0x120590f3eb389ad0!8m2!3d-2.5043556!4d-44.2412944!16s%2Fg%2F11vx5k75_7" target="_blank" rel="noopener">Ver todas no Google <span>→</span></a>
+    </div>
+    <div class="mural">
+      <figure class="postit rv"><p>“Profissionais muito atenciosos, preços justos e um espaço muito aconchegante!”</p><small>Avaliação no Google</small></figure>
+      <figure class="postit rv rv-d1"><p>“Ambiente lindo, espaçoso, confortável, um charme em todos os espaços.”</p><small>Avaliação no Google</small></figure>
+      <figure class="postit rv rv-d2"><p>“Clínica bem estruturada e com ótimo atendimento. Recomendo.”</p><small>Avaliação no Google</small></figure>
+    </div>
+  </div>
+  <div class="pino" style="left:4%;top:40px"><button aria-label="Nota 6">6</button><div class="bal"><b>Hoje</b>As 133 avaliações e a nota 4,9 não aparecem no site. Aqui viram prova logo na capa e nesta seção.</div></div>
+</section>
+
+<!-- ============ CHAMADA FINAL ============ -->
+<section class="chamada" aria-labelledby="t-chamada">
+  <img src="img/equipe.jpg" alt="" loading="lazy">
+  <div class="wrap">
+    <span class="eyebrow rv" style="color:var(--mel)">Seu pet é parte da família</span>
+    <h2 id="t-chamada" class="rv rv-d1">Quem protege, cuida e <em>acolhe.</em></h2>
+    <p class="rv rv-d2">Precisa de atendimento agora ou quer marcar uma consulta, um banho ou a hospedagem? Fale com a gente pelo WhatsApp.</p>
+    <div class="acoes rv rv-d3">
+      <a class="btn btn-wa" href="https://wa.me/5598984843232?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Aruanda." target="_blank" rel="noopener">Chamar no WhatsApp <span>→</span></a>
+      <a class="btn btn-linha" href="https://www.google.com/maps/dir/?api=1&destination=-2.5043556,-44.2412944" target="_blank" rel="noopener">Como chegar</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VANTAGENS + CONTATO ============ -->
+<section class="contato" id="contato" aria-labelledby="t-contato" style="position:relative">
+  <div class="wrap">
+    <div class="grade-contato">
+      <div>
+        <span class="eyebrow">Onde estamos</span>
+        <h2 id="t-contato">Rua Três, 13. <em>Cohajap,</em> São Luís.</h2>
+        <ul class="dados">
+          <li><span>WhatsApp e telefone</span><a href="tel:+5598984843232">(98) 98484-3232</a></li>
+          <li><span>E-mail</span><a href="mailto:clinica@aruandavet.net">clinica@aruandavet.net</a></li>
+          <li><span>Instagram</span><a href="https://www.instagram.com/aruanda.vet/" target="_blank" rel="noopener">@aruanda.vet</a></li>
+          <li><span>CEP</span><span>65073-200</span></li>
+        </ul>
+        <div class="vantagens">
+          <a class="vant" href="https://aruandavet.fidelimax.com.br/" target="_blank" rel="noopener"><b>Clube de Fidelidade →</b><span>Conheça as vantagens do Clube Aruanda.</span></a>
+          <div class="vant"><b>Convênios</b><span>Atendemos Petlove e Pet+vida.</span></div>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe title="Mapa: Aruanda Clínica Veterinária" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Aruanda+Cl%C3%ADnica+Veterin%C3%A1ria,+R.+Tr%C3%AAs,+13+-+Cohajap,+S%C3%A3o+Lu%C3%ADs+-+MA&z=16&output=embed"></iframe>
+      </div>
+    </div>
+    <div class="rodape">
+      <div class="gigante" aria-hidden="true">Aruanda</div>
+      <span>© Aruanda Clínica Veterinária e Hotel Pet</span>
+      <span>Responsável técnico: nome e CRMV-MA a confirmar</span>
+      <span>Pré-projeto Lumina Serviços Digitais</span>
+    </div>
+  </div>
+  <div class="pino" style="right:6%;top:40px"><button aria-label="Nota 7">7</button><div class="bal"><b>Hoje</b>O e-mail do rodapé abre info@mysite.com (sobra do modelo do Wix) e a página “Plano de saúde” está vazia. Aqui, e-mail certo, convênios e o Clube.</div></div>
+</section>
+</main>
+
+<a class="fab" id="fab" href="https://wa.me/5598984843232?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Aruanda." target="_blank" rel="noopener" aria-label="Chamar a Aruanda no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3a.4.4 0 0 0 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg>
+  WhatsApp
+</a>
+<button class="apresentar" id="apresentar" type="button" aria-pressed="false" title="Atalho: tecla N">✦ Antes × depois</button>
+
+<script>
+// A faixa do esboço não pode empurrar a hero para fora da primeira tela
+const medirFaixa = () => document.documentElement.style.setProperty('--faixa', document.querySelector('.esboco').offsetHeight + 'px');
+medirFaixa();
+addEventListener('resize', medirFaixa);
+
+/* ---------- Hero Golden interativo (mesma lógica de hero-golden-interativo/index.html) ---------- */
+(() => {
+  'use strict';
+  const ASSETS = 'assets/';
+  const FPS = 24, TOTAL = 240, COLS = 16, FW = 288, FH = 512, VIDEO_W = 720, VIDEO_H = 1280;
+  const CABECA = { x: 360, y: 370 };
+  const TRECHOS = { E: { frente: 124 }, D: { frente: 132 }, C: { frente: 214 } };
+  const trechoDe = (f) => {
+    if (f >= 60 && f <= 128) return 'E';
+    if (f > 128 && f <= 190) return 'D';
+    if (f > 190 && f <= 224) return 'C';
+    return null;
+  };
+
+  const hero = document.getElementById('inicio');
+  const video = document.getElementById('video');
+  const tela = document.getElementById('sprite');
+  const ctx = tela.getContext('2d');
+  const amb = document.getElementById('ambiente');
+  const actx = amb.getContext('2d');
+  const poster = document.getElementById('poster');
+  const dica = document.getElementById('dica');
+  const sprite = new Image();
+  sprite.decoding = 'async';
+
+  let modo = 'carregando', p = 0, alvo = { trecho: 'E', t: 124 }, cursor = null;
+  let ultimoMovimento = 0, frameVideo = 0, salto = null, rect = { x: 0, y: 0, w: 0, h: 0 }, dpr = 1;
+  let visivel = true;
+  const PARADO_MS = 650;
+
+  function layout() {
+    const W = hero.clientWidth, H = hero.clientHeight, ar = VIDEO_W / VIDEO_H;
+    let w, h;
+    if (W / H <= 0.8) { w = Math.max(W, H * ar); h = w / ar; } else { h = H; w = h * ar; }
+    // em telas largas, o filhote fica à direita do texto
+    let x = (W - w) / 2;
+    if (W / H > 1.2 && W > 700) x = Math.min(W - w - W * 0.06, W * 0.5);
+    rect = { x, y: (H - h) / 2, w, h };
+    hero.classList.toggle('paisagem', W / H > 0.8);
+    for (const el of [video, tela]) {
+      el.style.left = rect.x + 'px'; el.style.top = rect.y + 'px';
+      el.style.width = rect.w + 'px'; el.style.height = rect.h + 'px';
+    }
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    tela.width = Math.round(rect.w * dpr); tela.height = Math.round(rect.h * dpr);
+    ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
+    if (modo === 'sprite' || modo === 'retomando') desenhar();
+  }
+
+  function blit(f, alpha) {
+    const i = ((f % TOTAL) + TOTAL) % TOTAL;
+    ctx.globalAlpha = alpha;
+    ctx.drawImage(sprite, (i % COLS) * FW, Math.floor(i / COLS) * FH, FW, FH, 0, 0, tela.width, tela.height);
+  }
+  function quadro(pos, alpha) {
+    const f = Math.floor(pos), fr = pos - f;
+    blit(f, alpha);
+    if (fr > 0.002) blit(Math.min(f + 1, TOTAL - 1), alpha * fr);
+  }
+  function desenhar() {
+    ctx.globalAlpha = 1;
+    if (salto) { quadro(salto.de, 1); quadro(salto.para, suave(salto.k)); } else quadro(p, 1);
+    ctx.globalAlpha = 1;
+  }
+
+  const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+  const lerp = (a, b, t) => a + (b - a) * t;
+  const suave = (t) => t * t * (3 - 2 * t);
+  const saida = (t) => 1 - (1 - t) * (1 - t);
+
+  function calcularAlvo() {
+    if (!cursor) return;
+    const hx = rect.x + rect.w * (CABECA.x / VIDEO_W), hy = rect.y + rect.h * (CABECA.y / VIDEO_H);
+    const escala = Math.min(hero.clientWidth, hero.clientHeight) * 0.55;
+    let nx = (cursor.x - hx) / escala, ny = (cursor.y - hy) / escala, m = Math.hypot(nx, ny);
+    if (m > 1) { nx /= m; ny /= m; m = 1; }
+    if (m < 0.09) { const tr = trechoDe(Math.round(p)) || 'E'; alvo = { trecho: tr, t: TRECHOS[tr].frente }; return; }
+    const ang = Math.atan2(ny, nx) * 180 / Math.PI, forca = saida(m);
+    if (Math.abs(ang) > 112.5) {
+      const v = clamp((ny / m) * 1.5, -1, 1);
+      const fim = v < 0 ? lerp(97, 102, -v) : lerp(97, 68, v);
+      alvo = { trecho: 'E', t: lerp(124, fim, forca) };
+    } else if (ang < -45) {
+      alvo = { trecho: 'C', t: lerp(214, 199, forca) };
+    } else {
+      const v = clamp(ang / 90, 0, 1);
+      alvo = { trecho: 'D', t: lerp(132, lerp(150, 175, v), forca) };
+    }
+  }
+
+  const AMORTECIMENTO = 7.5, VEL_MAX = 64, SALTO_MS = 240;
+  function aproximar(destino, dt) {
+    let passo = (destino - p) * (1 - Math.exp(-AMORTECIMENTO * dt));
+    const lim = VEL_MAX * dt;
+    p += clamp(passo, -lim, lim);
+    if (Math.abs(destino - p) < 0.01) p = destino;
+  }
+  function passoSprite(dt) {
+    if (salto) { salto.k += (dt * 1000) / SALTO_MS; if (salto.k >= 1) { p = salto.para; salto = null; } return; }
+    const atual = trechoDe(Math.round(p));
+    if (atual !== alvo.trecho) {
+      const destinoFrente = TRECHOS[alvo.trecho].frente;
+      if (atual === null) { salto = { de: p, para: destinoFrente, k: 0 }; return; }
+      if (Math.abs(p - TRECHOS[atual].frente) < 1.5) { salto = { de: p, para: destinoFrente, k: 0 }; return; }
+      aproximar(TRECHOS[atual].frente, dt);
+    } else aproximar(alvo.t, dt);
+  }
+
+  function frameAtualDoVideo() {
+    const viaTempo = Math.floor(video.currentTime * FPS + 1e-3);
+    return clamp(Number.isFinite(frameVideo) ? frameVideo : viaTempo, 0, TOTAL - 1);
+  }
+  function assumirSprite() {
+    if (modo === 'video') { video.pause(); p = frameAtualDoVideo(); }
+    modo = 'sprite';
+    salto = salto && salto.k < 1 ? salto : null;
+    desenhar();
+    tela.classList.add('ativo');
+  }
+  function retomarVideo() {
+    if (modo !== 'sprite') return;
+    if (salto) { p = salto.para; salto = null; desenhar(); }
+    modo = 'retomando';
+    const f = clamp(Math.round(p), 0, TOTAL - 1);
+    p = f; desenhar();
+    const aoBuscar = () => {
+      if (modo !== 'retomando') return;
+      let feito = false;
+      const revelar = () => {
+        if (feito || modo !== 'retomando') return;
+        feito = true; frameVideo = f; tela.classList.remove('ativo'); modo = 'video';
+        if (visivel) video.play().catch(() => {});
+      };
+      if ('requestVideoFrameCallback' in video) video.requestVideoFrameCallback(() => revelar());
+      requestAnimationFrame(() => requestAnimationFrame(() => setTimeout(revelar, 90)));
+    };
+    video.addEventListener('seeked', aoBuscar, { once: true });
+    video.currentTime = (f + 0.5) / FPS;
+  }
+
+  function pintarAmbiente() {
+    try {
+      if (modo === 'video') actx.drawImage(video, 0, 0, amb.width, amb.height);
+      else if (sprite.complete) actx.drawImage(tela, 0, 0, amb.width, amb.height);
+    } catch (e) { /* frame ainda não disponível */ }
+  }
+
+  let antes = performance.now();
+  function laco(agora) {
+    const dt = Math.min(0.1, (agora - antes) / 1000);
+    antes = agora;
+    if (visivel) {
+      if (modo === 'sprite') {
+        calcularAlvo(); passoSprite(dt); desenhar();
+        if (agora - ultimoMovimento > PARADO_MS && !salto) retomarVideo();
+      }
+      pintarAmbiente();
+    }
+    requestAnimationFrame(laco);
+  }
+  function acompanharVideo() {
+    if (!('requestVideoFrameCallback' in video)) return;
+    const cb = (_, meta) => { frameVideo = Math.floor(meta.mediaTime * FPS + 1e-3); video.requestVideoFrameCallback(cb); };
+    video.requestVideoFrameCallback(cb);
+  }
+
+  function aoMover(e) {
+    if (modo === 'carregando') return;
+    const r = hero.getBoundingClientRect();
+    cursor = { x: e.clientX - r.left, y: e.clientY - r.top };
+    ultimoMovimento = performance.now();
+    dica.classList.add('saiu');
+    if (modo === 'video') assumirSprite();
+    else if (modo === 'retomando') { video.pause(); modo = 'sprite'; tela.classList.add('ativo'); }
+  }
+  hero.addEventListener('pointermove', aoMover, { passive: true });
+  hero.addEventListener('pointerdown', aoMover, { passive: true });
+  hero.addEventListener('pointerleave', () => { cursor = null; if (modo === 'sprite') retomarVideo(); });
+  hero.addEventListener('pointerup', (e) => { if (e.pointerType !== 'mouse') { cursor = null; ultimoMovimento = 0; } });
+  window.addEventListener('resize', layout);
+
+  // Pausa o vídeo quando a hero sai da tela (economia de bateria e CPU)
+  new IntersectionObserver(([e]) => {
+    visivel = e.isIntersecting;
+    if (modo === 'video') visivel ? video.play().catch(() => {}) : video.pause();
+  }).observe(hero);
+
+  async function iniciar() {
+    layout();
+    const [blob] = await Promise.all([
+      fetch(ASSETS + 'golden-loop.mp4').then((r) => { if (!r.ok) throw new Error('vídeo'); return r.blob(); }),
+      (sprite.src = ASSETS + 'sprite.jpg', sprite.decode()),
+    ]);
+    video.src = URL.createObjectURL(blob);
+    await new Promise((ok) => video.addEventListener('loadeddata', ok, { once: true }));
+    acompanharVideo();
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) await video.play().catch(() => {});
+    modo = 'video';
+    poster.classList.add('saiu');
+    requestAnimationFrame(laco);
+  }
+  iniciar().catch((err) => { console.error(err); poster.style.opacity = 1; });
+
+  window.__hero = { get modo() { return modo; }, get p() { return p; } };
+})();
+
+/* ---------- Página ---------- */
+(() => {
+  'use strict';
+  const reduzido = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Topo: fica sólido depois da hero; botão do WhatsApp aparece fora da hero
+  const topo = document.getElementById('topo');
+  const fab = document.getElementById('fab');
+  const hero = document.getElementById('inicio');
+  const aoRolar = () => {
+    const passou = hero.getBoundingClientRect().bottom < 80;
+    topo.classList.toggle('solido', passou);
+    fab.classList.toggle('on', hero.getBoundingClientRect().bottom < innerHeight * .5);
+    const faixa = document.querySelector('.esboco');
+    topo.style.top = Math.max(0, faixa.getBoundingClientRect().bottom) + 'px';
+  };
+  addEventListener('scroll', aoRolar, { passive: true });
+  aoRolar();
+  // a faixa muda de altura quando a fonte carrega ou a tela gira
+  new ResizeObserver(() => { medirFaixa(); aoRolar(); }).observe(document.querySelector('.esboco'));
+
+  // Revelação na rolagem
+  const io = new IntersectionObserver((itens) => {
+    for (const it of itens) if (it.isIntersecting) { it.target.classList.add('in'); io.unobserve(it.target); }
+  }, { rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('.rv').forEach((el) => reduzido ? el.classList.add('in') : io.observe(el));
+
+  // Relógio 24h: hora real de São Luís (UTC-3)
+  const marcas = document.getElementById('marcas');
+  for (let h = 0; h < 24; h++) {
+    const a = (h / 24) * Math.PI * 2 - Math.PI / 2, longo = h % 6 === 0;
+    const r1 = longo ? 214 : 222, r2 = 236;
+    const l = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    l.setAttribute('x1', 250 + r1 * Math.cos(a)); l.setAttribute('y1', 250 + r1 * Math.sin(a));
+    l.setAttribute('x2', 250 + r2 * Math.cos(a)); l.setAttribute('y2', 250 + r2 * Math.sin(a));
+    l.setAttribute('stroke', longo ? 'rgba(234,247,248,.7)' : 'rgba(234,247,248,.28)');
+    l.setAttribute('stroke-width', longo ? 2 : 1);
+    marcas.appendChild(l);
+  }
+  const fmt = new Intl.DateTimeFormat('pt-BR', { timeZone: 'America/Fortaleza', hour: '2-digit', minute: '2-digit', weekday: 'short', hour12: false });
+  const ponteiro = document.getElementById('ponteiro');
+  const arco = document.getElementById('arco');
+  const estadoBanho = document.getElementById('estado-banho');
+  function atualizarHora() {
+    const partes = Object.fromEntries(fmt.formatToParts(new Date()).map((x) => [x.type, x.value]));
+    const h = +partes.hour % 24, m = +partes.minute;
+    document.getElementById('hora-agora').textContent = `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`;
+    const frac = (h + m / 60) / 24;
+    ponteiro.style.transform = `rotate(${frac * 360}deg)`;
+    arco.style.strokeDashoffset = 1256.6 * (1 - frac);
+    const domingo = partes.weekday.startsWith('dom');
+    const aberto = !domingo && h >= 8 && h < 17;
+    estadoBanho.textContent = aberto ? 'Aberto' : 'Fechado agora';
+    estadoBanho.classList.toggle('fechado', !aberto);
+  }
+  atualizarHora();
+  setInterval(atualizarHora, 30000);
+
+  // Carrossel da equipe
+  const trilho = document.getElementById('trilho');
+  const passo = () => trilho.querySelector('.vet').getBoundingClientRect().width + 16;
+  document.getElementById('ant').addEventListener('click', () => trilho.scrollBy({ left: -passo(), behavior: reduzido ? 'auto' : 'smooth' }));
+  document.getElementById('prox').addEventListener('click', () => trilho.scrollBy({ left: passo(), behavior: reduzido ? 'auto' : 'smooth' }));
+
+  // Modo apresentação: notas "antes × depois" para a reunião com a clínica
+  const botao = document.getElementById('apresentar');
+  const alternar = () => {
+    const on = document.body.classList.toggle('notas');
+    botao.setAttribute('aria-pressed', on);
+  };
+  botao.addEventListener('click', alternar);
+  addEventListener('keydown', (e) => { if ((e.key === 'n' || e.key === 'N') && !e.ctrlKey && !e.altKey && !e.metaKey && !e.target.closest('input,textarea')) alternar(); });
+  document.querySelectorAll('.pino button').forEach((b) => b.addEventListener('click', () => b.parentElement.classList.toggle('fechado')));
+})();
+</script>
+</body>
+</html>

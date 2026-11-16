@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pré-projeto · Aruanda Clínica Veterinária</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,600&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--mar:#0b3d48;--mar-2:#0f5566;--turquesa:#22b3c4;--turquesa-claro:#dff4f6;--mel:#f2a23a;--mel-claro:#fdebd2;--creme:#fbf5ea;--papel:#fffdf8;--tinta:#10262b;--tinta-2:#4a5f64;--linha:#e7ddcc;--verde:#128c4a;--coral:#fbe3dc}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Nunito,system-ui,sans-serif;background:var(--creme);color:var(--tinta);line-height:1.55}
+  .capa{background:radial-gradient(circle at 50% -10%,var(--mar-2),var(--mar) 70%);color:#fff;padding:46px 20px 42px;text-align:center}
+  .capa small{color:var(--mel);font-weight:800;letter-spacing:.12em;font-size:12px;text-transform:uppercase}
+  .capa h1{font-family:Fraunces,Georgia,serif;font-size:clamp(30px,8vw,46px);line-height:1.12;margin:10px 0}
+  .capa h1 em{color:var(--mel)}
+  .capa p{max-width:580px;margin:0 auto;opacity:.9}
+  .selo{display:inline-block;margin-top:16px;background:rgba(255,255,255,.12);border-radius:99px;padding:6px 14px;font-size:13.5px}
+  .selo b{color:var(--mel)}
+  main{max-width:780px;margin:0 auto;padding:0 16px 40px}
+  section{margin-top:36px}
+  h2{font-family:Fraunces,Georgia,serif;font-size:26px;line-height:1.2;margin-bottom:12px}
+  h2 em{color:var(--mar-2)}
+  .grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+  .card{background:var(--papel);border:1px solid var(--linha);border-radius:16px;padding:16px}
+  .card h3{font-size:16px;margin-bottom:4px}
+  .card p{color:var(--tinta-2);font-size:14.5px}
+  .bom .card{border-left:4px solid var(--turquesa)}
+  .dor .card{border-left:4px solid var(--mel)}
+  .sites{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+  .site{background:var(--papel);border:1px solid var(--linha);border-radius:20px;padding:20px;display:flex;flex-direction:column}
+  .site small{color:var(--mar-2);font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:12px}
+  .site h3{font-family:Fraunces,Georgia,serif;font-size:22px;margin:4px 0 8px}
+  .site p{color:var(--tinta-2);font-size:14.5px;flex:1}
+  .site ul{margin:10px 0 14px 18px;color:var(--tinta-2);font-size:14px}
+  .btn{display:inline-block;text-align:center;background:var(--mar);color:#fff;text-decoration:none;font-weight:800;border-radius:14px;padding:13px 18px}
+  .btn.mel{background:var(--mel);color:var(--tinta)}
+  .btn.verde{background:var(--verde)}
+  .modulo{background:var(--papel);border:1px solid var(--linha);border-radius:18px;padding:18px;margin-bottom:12px}
+  .modulo h3{font-size:18px;display:flex;align-items:center;gap:8px}
+  .num{display:inline-flex;flex:none;width:28px;height:28px;border-radius:50%;background:var(--mar);color:var(--mel);font-weight:800;font-size:13px;align-items:center;justify-content:center}
+  .modulo ul{margin:10px 0 0 20px;color:var(--tinta-2);font-size:14.5px}
+  .modulo li{margin-bottom:4px}
+  .ganho{margin-top:10px;background:var(--turquesa-claro);color:var(--mar);border-radius:10px;padding:8px 12px;font-size:14px;font-weight:700}
+  .etiqueta{font-size:11px;font-weight:800;background:var(--mel-claro);color:#8a5a12;border-radius:6px;padding:2px 7px;margin-left:auto;white-space:nowrap}
+  .fases{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+  .fase{background:var(--mar);color:#fff;border-radius:16px;padding:16px}
+  .fase b{color:var(--mel);display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+  .fase span{display:block;font-weight:800;margin:4px 0}
+  .fase p{opacity:.85;font-size:13.5px}
+  .antes-depois{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .antes-depois div{border-radius:14px;padding:14px;font-size:14px}
+  .antes{background:var(--coral)}.depois{background:var(--turquesa-claro)}
+  .antes b,.depois b{display:block;margin-bottom:6px;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+  .cta{background:var(--mar);color:#fff;border-radius:20px;padding:26px;text-align:center;margin-top:36px}
+  .cta h2{color:#fff}.cta h2 em{color:var(--mel)}
+  .cta p{opacity:.88;max-width:540px;margin:0 auto 16px}
+  .nota{color:var(--tinta-2);font-size:13px;margin-top:10px}
+  footer{text-align:center;color:var(--tinta-2);font-size:13px;padding:24px 16px 40px}
+  @media (max-width:520px){.antes-depois{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="capa">
+  <small>Pré-projeto · Lumina Serviços Digitais</small>
+  <h1>A Aruanda inteira,<br><em>a um toque do tutor</em></h1>
+  <p>Uma proposta para o site, o Google e o WhatsApp mostrarem tudo o que a Aruanda faz, com a emergência 24h na
+  frente e o tutor marcando banho, hotel e consulta sem esperar resposta.</p>
+  <div class="selo"><b>★ 4,9</b> com 134 avaliações no Google · aberta 24 horas</div>
+</div>
+
+<main>
+  <section class="bom">
+    <h2>O que a Aruanda <em>já tem de forte</em></h2>
+    <div class="grade">
+      <div class="card"><h3>Reputação rara</h3><p>4,9 com 134 avaliações: "profissionais muito atenciosos", "ambiente lindo, espaçoso".</p></div>
+      <div class="card"><h3>Atendimento 24h</h3><p>Urgência, emergência e internação a qualquer hora, além de cirurgia e exames.</p></div>
+      <div class="card"><h3>Serviço completo</h3><p>Clínica, centro de estética, hotel, creche, domicílio e pets não convencionais.</p></div>
+      <div class="card"><h3>Equipe e marca</h3><p>Equipe apresentada no Instagram, identidade turquesa e laranja e um tom carinhoso.</p></div>
+    </div>
+  </section>
+
+  <section class="dor">
+    <h2>Onde a Aruanda <em>está perdendo tutores</em></h2>
+    <div class="grade">
+      <div class="card"><h3>O site mostra só 3 serviços</h3><p>Emergência, internação, cirurgia, exames, creche, domicílio e exóticos não aparecem.</p></div>
+      <div class="card"><h3>Emergência sem destaque</h3><p>Não há botão de WhatsApp na capa. Numa urgência, o tutor precisa procurar como chamar.</p></div>
+      <div class="card"><h3>Detalhes que passam desleixo</h3><p>"Plano de Saúde" vazio, e-mail do rodapé que abre um endereço do modelo do Wix e erro no texto da equipe.</p></div>
+      <div class="card"><h3>As 134 avaliações ficam escondidas</h3><p>A melhor prova da clínica não aparece no site.</p></div>
+      <div class="card"><h3>Tudo marcado à mão</h3><p>Banho e tosa, hotel e creche dependem de troca de mensagens no WhatsApp.</p></div>
+      <div class="card"><h3>Retorno que não volta</h3><p>Sem lembrete de vacina, vermífugo e banho, o tutor esquece e a agenda esvazia.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Os dois sites <em>que já montamos</em></h2>
+    <div class="sites">
+      <div class="site">
+        <small>Opção 1</small>
+        <h3>Direto ao ponto</h3>
+        <p>Página única, leve e rápida, nas cores da Aruanda, pensada para o tutor que chega pelo celular.</p>
+        <ul>
+          <li>Faixa de emergência 24h com "Chamar agora"</li>
+          <li>Os 9 serviços, equipe, estrutura e avaliações</li>
+          <li>Convênios, Clube de Fidelidade e mapa</li>
+        </ul>
+        <a class="btn" href="opcao-1/">Ver a opção 1</a>
+      </div>
+      <div class="site">
+        <small>Opção 2</small>
+        <h3>Experiência completa</h3>
+        <p>Direção de arte própria: "a luz da Aruanda não apaga". Abre com um filhote que acompanha o toque e mostra o plantão na hora real de São Luís.</p>
+        <ul>
+          <li>Relógio do plantão e banho e tosa "aberto agora"</li>
+          <li>Serviços em mosaico com fotos da clínica</li>
+          <li>Seção de hotel com reserva pelo WhatsApp</li>
+        </ul>
+        <a class="btn mel" href="opcao-2/">Ver a opção 2</a>
+      </div>
+    </div>
+    <p class="nota">As fotos são do Instagram da Aruanda e servem só para esta demonstração. No projeto, usamos fotos autorizadas pela clínica.</p>
+  </section>
+
+  <section>
+    <h2>Tudo o que dá para <em>resolver</em></h2>
+
+    <div class="modulo">
+      <h3><span class="num">1</span>Site novo no lugar do Wix <span class="etiqueta">base</span></h3>
+      <ul>
+        <li>Opção 1 ou 2, ou o melhor das duas, com todos os serviços explicados.</li>
+        <li>Emergência 24h e WhatsApp sempre visíveis, em qualquer parte do site.</li>
+        <li>Equipe com nome, área de atuação e CRMV; convênios e Clube de Fidelidade no lugar do "Plano de Saúde" vazio.</li>
+        <li>Avaliações do Google, e-mail certo, mapa e textos dentro das regras de publicidade do CFMV.</li>
+        <li>Preparado para aparecer em buscas como "veterinário 24h em São Luís".</li>
+      </ul>
+      <div class="ganho">O tutor entende em segundos tudo o que a Aruanda faz e chama na hora.</div>
+    </div>
+
+    <div class="modulo">
+      <h3><span class="num">2</span>Google Meu Negócio <span class="etiqueta">base</span></h3>
+      <ul>
+        <li>Categorias revisadas: hospital veterinário, hotel para animais e banho e tosa.</li>
+        <li>Todos os serviços cadastrados com descrição, e fotos novas da estrutura e da equipe.</li>
+        <li>Botão Site levando para o site novo; posts no Google com campanhas e avisos.</li>
+        <li>Modelo de resposta às avaliações, inclusive às críticas.</li>
+      </ul>
+      <div class="ganho">Quem procura veterinário perto do Cohajap encontra a Aruanda completa.</div>
+    </div>
+
+    <div class="modulo">
+      <h3><span class="num">3</span>Atendimento 24h no WhatsApp</h3>
+      <ul>
+        <li>Menu de entrada: emergência, banho e tosa, hotel e creche, consulta, endereço e horários.</li>
+        <li><b>Emergência vai direto para uma pessoa</b>, sem robô no caminho.</li>
+        <li>Respostas na hora sobre horários, convênios e documentos da hospedagem, também de madrugada.</li>
+        <li>Versão com inteligência artificial opcional. Nunca dá orientação médica: dúvida de saúde vai para a equipe.</li>
+      </ul>
+      <div class="ganho">Nenhuma mensagem fica sem resposta, e a urgência continua humana.</div>
+    </div>
+
+    <div class="modulo">
+      <h3><span class="num">4</span>Agendamento online</h3>
+      <ul>
+        <li>Banho e tosa marcados pelo celular, escolhendo serviço e horário.</li>
+        <li>Pedido de reserva no hotel e na creche com data de entrada e saída.</li>
+        <li>Consultas de rotina; emergência continua no WhatsApp.</li>
+        <li>Instala na tela do celular como um aplicativo, sem loja de apps.</li>
+      </ul>
+      <div class="ganho">A equipe para de marcar à mão e o tutor marca na hora que quiser.</div>
+    </div>
+
+    <div class="modulo">
+      <h3><span class="num">5</span>Lembretes e pós-atendimento</h3>
+      <ul>
+        <li>Lembrete de vacina, vermífugo e retorno do banho.</li>
+        <li>Confirmação na véspera para diminuir faltas.</li>
+        <li>Mensagem de carinho depois do atendimento, com convite para avaliar no Google.</li>
+        <li>Hotel: aviso de entrada e saída e espaço para enviar foto do pet ao tutor.</li>
+        <li>Só para tutores que aceitarem receber, com opção de sair em toda mensagem.</li>
+      </ul>
+      <div class="ganho">O tutor volta no tempo certo, e a agenda se enche sozinha.</div>
+    </div>
+
+    <div class="modulo">
+      <h3><span class="num">6</span>Páginas especiais <span class="etiqueta">para crescer</span></h3>
+      <ul>
+        <li><b>Hotel e creche</b>: rotina, espaços, regras e reserva, pronta para as férias de dezembro e janeiro.</li>
+        <li><b>Pets não convencionais</b>: coelhos, roedores e silvestres, um diferencial da equipe.</li>
+        <li><b>Clube de Fidelidade e convênios</b>, explicados de um jeito simples.</li>
+      </ul>
+    </div>
+
+    <div class="modulo">
+      <h3><span class="num">7</span>Anúncios e imagens <span class="etiqueta">para crescer</span></h3>
+      <ul>
+        <li>Anúncios no Google para "veterinário 24h" perto da clínica, e para hotel e banho na temporada.</li>
+        <li>Anúncios no Instagram e no Facebook para hotel e creche nas férias.</li>
+        <li>Fotos tratadas da estrutura, da equipe e dos pacientes, e banners das campanhas.</li>
+        <li>Só depois do site novo no ar, para o anúncio levar a uma página que converte.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Por onde <em>começar</em></h2>
+    <div class="fases">
+      <div class="fase"><b>Fase 1</b><span>Base</span><p>Site novo + Google Meu Negócio + fotos tratadas.</p></div>
+      <div class="fase"><b>Fase 2</b><span>Agenda</span><p>Agendamento online + lembretes e pós-atendimento.</p></div>
+      <div class="fase"><b>Fase 3</b><span>Atendimento 24h</span><p>WhatsApp com menu ou com inteligência artificial.</p></div>
+      <div class="fase"><b>Fase 4</b><span>Crescimento</span><p>Páginas especiais + anúncios.</p></div>
+    </div>
+    <p class="nota">Dá para começar só pela Fase 1 e crescer depois, no ritmo da clínica.</p>
+  </section>
+
+  <section>
+    <h2>Como fica <em>na prática</em></h2>
+    <div class="antes-depois">
+      <div class="antes"><b>Hoje</b>O tutor acha a Aruanda no Google, abre o site, vê 3 serviços e nenhum WhatsApp, volta ao Instagram, manda mensagem e espera a resposta para marcar.</div>
+      <div class="depois"><b>Com o projeto</b>O tutor abre o site, vê a emergência 24h e todos os serviços, toca no WhatsApp ou marca o banho na hora. Depois recebe o lembrete da próxima vacina.</div>
+    </div>
+  </section>
+
+  <div class="cta">
+    <h2>Próximo <em>passo</em></h2>
+    <p>Uma conversa de 15 a 20 minutos, por Google Meet ou WhatsApp, para escolher o site e as fases que fazem
+    sentido para a Aruanda. O investimento é apresentado nessa conversa, de acordo com o que vocês escolherem.</p>
+    <a class="btn verde" href="https://wa.me/5511954746914?text=Oi%20Robinson%2C%20vi%20o%20pr%C3%A9-projeto%20da%20Aruanda" target="_blank" rel="noopener">Marcar a conversa</a>
+  </div>
+</main>
+
+<footer>Pré-projeto preparado por Robinson · Lumina Serviços Digitais · novembro de 2026<br>
+Documento de apresentação. Os sites são demonstrações e não foram publicados em nome da Aruanda.</footer>
+</body>
+</html>
